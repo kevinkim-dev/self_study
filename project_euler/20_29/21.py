@@ -19,7 +19,6 @@ for i in range(1, 10001):
 
 friendly_num_sum = 0
 
-print(divisor_sum_list[219], divisor_sum_list[283])
 # idx 219에 220의 약수의 합인 284가 들어있고.
 # 이 284의 약수의 합이 들어있는 idx 283이 220인 
 

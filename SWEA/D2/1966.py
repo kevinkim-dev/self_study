@@ -1,3 +1,10 @@
+#########################
+#  SWEA number 1966
+#  by 김승현                
+#########################
+
+# Q. 숫자를 정렬하자
+
 T = int(input())
 
 for t in range(1, T+1):
@@ -9,5 +16,5 @@ for t in range(1, T+1):
                 num_list[j], num_list[j+1] = num_list[j+1], num_list[j]
     for idx in range(list_len):
         num_list[idx] = str(num_list[idx])
-        ans = " ".join(num_list)
+    ans = " ".join(num_list)
     print("#{0} {1}".format(t, ans))

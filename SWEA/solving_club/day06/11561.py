@@ -12,5 +12,5 @@ for t in range(1, int(input())+1):
         if string[i] == ' ' and new_string == '':
             continue
         new_string += string[i]
-    print("#%d %s" %(t, new_string))cd ..
+    print("#%d %s" %(t, new_string))
     

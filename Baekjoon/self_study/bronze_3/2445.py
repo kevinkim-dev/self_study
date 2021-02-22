@@ -1,12 +1,11 @@
 ###########################
-#  BaekJoon 2446번
+#  BaekJoon 2445번
 #  by 김승현                
 ###########################
 
-# Q. 별 찍기 - 9
+# Q. 별 찍기 - 8
 
 n = int(input())
 
 for i in range(1, 2*n):
-    x = abs(i-n)
-    print(' '*(n-x-1) + '*'*(2*x+1))
+    print('*'*(n-abs(n-i)) +' '*2*abs(n-i) + '*'*(n-abs(n-i)))

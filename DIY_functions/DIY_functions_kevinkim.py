@@ -1,4 +1,4 @@
-###########################
+﻿###########################
 #  DIY_functions  
 #  by 김승현                
 ###########################
@@ -11,6 +11,14 @@ def DIY_palindrom(x):
         if check_num[0] == check_num[len(check_num)-1]:
             check_num = check_num[1:-1]
         else:
+            return False
+    return True
+#소수 판별
+def check_prime(x):
+    if x == 1:
+        return False
+    for i in range(2, x):
+        if x % i == 0:
             return False
     return True
 

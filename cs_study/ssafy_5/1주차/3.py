@@ -1,13 +1,18 @@
-a = [1, 2, 3]
-b = '123'
+x = 1
+y = 2
+eval('1+2')
+print(eval('x = 1'))
 
-a_iter = iter(a)
-b_iter = iter(b)
+# a = [1, 2, 3]
+# b = '123'
 
-print(type(a_iter))
-print(type(b_iter))
+# a_iter = iter(a)
+# b_iter = iter(b)
 
-print(next(a_iter))
-print(next(a_iter))
-print(next(a_iter))
-print(next(a_iter))
+# print(type(a_iter))
+# print(type(b_iter))
+
+# print(next(a_iter))
+# print(next(a_iter))
+# print(next(a_iter))
+# print(next(a_iter))

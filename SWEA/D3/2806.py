@@ -46,7 +46,6 @@ def board_erase(q_num, n):
     return
 
 
-
 for t in range(1, int(input())+1):
     N = int(input())
     board = [[-1]*N for _ in range(N)]

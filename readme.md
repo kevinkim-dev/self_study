@@ -6,6 +6,10 @@
 
 
 
+blog: https://kevinkim95-dev.tistory.com/
+
+
+
 ### Baekjoon
 
 백준 사이트 알고리즘 문제를 난이도 별로 나눠서 푼 흔적입니다

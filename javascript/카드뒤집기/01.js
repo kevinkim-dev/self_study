@@ -24,8 +24,8 @@ document.querySelector('button').addEventListener('click', function(event) {
             card.row = i
             card.col = j
             card.num = i*col + j + 1
-            card.style.marginTop = `${i*100}px`
-            card.style.marginLeft = `${j*70}px`
+            card.style.marginTop = `${i*130}px`
+            card.style.marginLeft = `${j*90}px`
             card_front.innerText = `${card.num}`
             if (arr.indexOf(card.num) === -1) {
                 card_back.innerText = `꽝`

@@ -27,7 +27,7 @@ import reportWebVitals from './reportWebVitals';
 // );
 
 
-#2. 엘리먼트 렌더링
+// #2. 엘리먼트 렌더링
 function tick() {
   const element = (
     <div>

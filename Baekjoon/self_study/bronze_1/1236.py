@@ -19,6 +19,5 @@ for i in range(c):
             break
     if not flag:
         cx += 1
-        
-print(rx, cx)
+
 print(max(rx, cx))

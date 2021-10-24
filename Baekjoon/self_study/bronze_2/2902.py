@@ -15,5 +15,5 @@ for s in name:
         is_first = False
     elif s == '-':
         is_first = True
-
+c
 print(ans)

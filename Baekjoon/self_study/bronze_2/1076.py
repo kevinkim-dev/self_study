@@ -21,4 +21,4 @@ color = {
 
 a, b, c = input(), input(), input()
 
-print((color[a]*10 + color[b]) * color[c])
+print((color[a]*10 + color[b]) * 10**color[c])

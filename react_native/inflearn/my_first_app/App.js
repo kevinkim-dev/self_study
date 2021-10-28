@@ -1,43 +1,48 @@
 import React, { Component } from 'react';
-import {View, Text, StyleSheet, ScrollView, Button} from 'react-native'
+import {View, Text, StyleSheet, ScrollView, Button, TextInput, ActivityIndicator, Image} from 'react-native'
 import Header from './src/header'
 import Generator from './src/generator'
 import NumList from './src/numlist'
 import Input from './src/input'
+import Picker from './src/picker'
+import UFO from './assets/images/ufo.png'
+
 
 class App extends Component {
   state = {
-    appName: 'My First App',
-    random: [36, 999]
+    myTextInput: '',
+    alphabet: ['a', 'b', 'c', 'd']
   }
 
-  onAddRandomNum = () => {
-    const randomNum = Math.floor(Math.random()*100)+1
-    this.setState(now => {
-      return {
-        random: [...now.random, randomNum]
-      }
-    })
-  }
 
-  onNumDelete = (position) => {
-    const newArray = this.state.random.filter((num, index)=> {
-      return position != index;
+  onChangeInput = (event) => {
+    this.setState({
+      myTextInput: event
     })
-    this.setState({ random: newArray})
   }
 
   onAddTextInput = () => {
-    alert('I want to add')
+    this.setState(prevState=> {
+      return {
+        myTextInput: '',
+        alphabet: [...prevState.alphabet, prevState.myTextInput]
+      }
+    })
   }
 
   render() {
     return (
       <View style={styles.mainView}>
-        <Input />
-        <Button 
-          title="Add Text Input"
-          onPress={this.onAddTextInput}
+        <ActivityIndicator
+          size="large"
+          color="red"
+          animating={true}
+        />
+        <Image 
+          style={styles.image}
+          source={{uri: 'https://picsum.photos/seed/picsum/200/300'}}
+          resizeMode="contain"
+          onLoadEnd={()=>alert('Image Loaded')}
         />
       </View>
     )
@@ -61,6 +66,17 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     color: 'red',
     padding: 20
+  },
+  input: {
+    backgroundColor: '#cdcdcd',
+    width: '100%',
+    marginTop: 20,
+    fontSize: 25,
+    padding: 10
+  },
+  image: {
+    width: '100%',
+    height: 700
   }
 })
 

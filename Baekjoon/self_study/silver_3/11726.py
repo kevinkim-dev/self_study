@@ -10,4 +10,8 @@ N = int(input())
 tile = [1, 2]
 while len(tile) < N:
     tile.append(tile[-1] + tile[-2])
-print(tile[-1] % 10007)
+
+if N == 1:
+    print(1)
+else:
+    print(tile[-1] % 10007)

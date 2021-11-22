@@ -3,26 +3,23 @@
 #  by 김승현                
 #########################
 
-# Q. N-Queen (시간초과)
+# Q. N-Queen
 
-def Nqueen(row, visited_col, queen_list):
-    global cnt
-    if row == N:
-        cnt += 1
+
+def nQueen(r, cols, ls, rs):
+    global ans
+    if r == N:
+        ans += 1
         return
-    for col in range(N):
-        flag = 1
-        if col not in visited_col:
-            for queen in queen_list:
-                if abs(row-queen[0]) == abs(col-queen[1]):
-                    flag = 0
-                    break
-            if flag:
-                Nqueen(row+1, visited_col + [col], queen_list + [[row, col]])
+    for c in range(N):
+        if c not in cols and r+c not in ls and r-c not in rs:
+            nQueen(r+1, cols + [c], ls + [r+c], rs + [r-c])
     return
 
-
 N = int(input())
-cnt = 0
-Nqueen(0, [], [])
-print(cnt)
+
+ans = 0
+
+nQueen(0, [], [], [])
+
+print(ans)

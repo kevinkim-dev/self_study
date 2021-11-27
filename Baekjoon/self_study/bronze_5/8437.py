@@ -4,10 +4,9 @@
 ###########################
 
 # Q. Julka 
-# !미완료
 
 a = int(input())
 b = int(input())
 
-print(int((a+b)/2))
-print(int((a+b)/2) - b)
+print(int((a+b)//2))
+print(int((a+b)//2) - b)

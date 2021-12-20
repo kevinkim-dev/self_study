@@ -36,10 +36,12 @@ T = int(input())
 for _ in range(T):
     N = int(input())
     ans = []
+    # 모든 경우의 수
     for i in range(3**(N-1)):
         is_zero = make_zero(i, N)
         if is_zero:
             ans.append(is_zero)
+    # ascii순서로 sort
     ans.sort()
     for a in ans:
         print(a)

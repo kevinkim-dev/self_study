@@ -33,7 +33,6 @@ def kruskal():
     return cost
 
 N = int(input())
-MD = 2*10**9 + 1
 
 planets = []
 tunnels = []
@@ -58,43 +57,3 @@ tunnels.sort(key=lambda x: x[0])
 union_set = [i for i in range(N)]
 
 print(kruskal())
-
-
-
-
-# def prim():
-#     cost = 0
-#     node = 0
-#     visited = [0]*N
-#     visited[0] = 1
-#     visit_cnt = 1
-#     while visit_cnt < N:
-#         D = MD
-#         for i in range(N):
-#             if i == node or visited[i]:
-#                 continue
-#             if adj_list[node][i] < D:
-#                 D = adj_list[node][i]
-#                 next = i
-#         visited[next] = 1
-#         node = next
-#         cost += D
-#         visit_cnt += 1
-#     return cost
-
-# N = int(input())
-# MD = 2*10**9 + 1
-# adj_list = [[MD]*N for _ in range(N)]
-
-# planets = []
-
-# for i in range(N):
-#     x, y, z = map(int, input().split())
-#     for j in range(i):
-#         nx, ny, nz = planets[j]
-#         dist = min(abs(nx-x), abs(ny-y), abs(nz-z))
-#         adj_list[i][j] = dist
-#         adj_list[j][i] = dist
-#     planets.append([x, y, z])
-
-# print(prim())

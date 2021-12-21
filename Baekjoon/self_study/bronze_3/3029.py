@@ -11,7 +11,7 @@ h2, m2, s2 = map(int, input().split(':'))
 time1 = h1*60*60 + m1*60 + s1
 time2 = h2*60*60 + m2*60 + s2
 
-if time2 < time1:
+if time2 <= time1:
     time2 += 24*60*60
 
 ans = time2 - time1

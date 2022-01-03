@@ -28,3 +28,6 @@ N, M = map(int, input().split())
 maze = [list(input()) for n in range(N)]
 q = [(0, 0)]
 print(search())
+
+2, 3   -1, 0
+

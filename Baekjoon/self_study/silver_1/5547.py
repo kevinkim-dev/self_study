@@ -48,7 +48,6 @@ def dfs(row, col):
     return wall
 
 
-
 C, R = map(int, input().split())
 
 house = [list(map(int, input().split())) for _ in range(R)]

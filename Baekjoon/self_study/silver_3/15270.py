@@ -13,9 +13,11 @@ def make_friend(idx, cnt):
         else:
             ans = max(ans, cnt+1) 
         return
+    
+    # 선택 안하고 다음
     make_friend(idx+1, cnt)
 
-    # 선택 함
+    # 선택 하고 다음
     a, b = friends[idx]
     if not visited[a] and not visited[b]:
         visited[a] = 1
@@ -25,7 +27,6 @@ def make_friend(idx, cnt):
         visited[b] = 0
     return
 
-        
 
 N, M = map(int, input().split())
 

@@ -20,4 +20,5 @@ while True:
     total += 1
 
 for tree in sorted(tree_dict.keys()):
-    print(f"{tree} %.4f" %(tree_dict.get(tree)*100/total))
+    print(tree, '%.4f' %(tree_dict.get(tree)*100/total))
+    # print(f"{tree} %.4f" %(tree_dict.get(tree)*100/total))
